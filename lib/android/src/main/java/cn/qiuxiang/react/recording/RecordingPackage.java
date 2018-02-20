@@ -13,6 +13,11 @@ public class RecordingPackage implements ReactPackage {
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         return Collections.<NativeModule>singletonList(new RecordingModule(reactContext));
     }
+    
+    @Override	
+    public List<Class<? extends JavaScriptModule>> createJSModules() {	
+        return Collections.emptyList();	
+    }
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
